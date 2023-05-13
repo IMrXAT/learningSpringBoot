@@ -9,14 +9,25 @@ class VideoEntity {
     private String name;
     private String description;
 
-    protected VideoEntity(){
-        this(null, null);
+    public String getDuration() {
+        return duration;
     }
 
-    VideoEntity(String name, String description){
+    public void setDuration(String duration) {
+        this.duration = duration;
+    }
+
+    private String duration;
+
+    protected VideoEntity(){
+        this(null, null, null);
+    }
+
+    VideoEntity(String name, String description, String duration){
         this.id = null;
         this.name = name;
         this.description = description;
+        this.duration = duration;
     }
 
     public String getName() {

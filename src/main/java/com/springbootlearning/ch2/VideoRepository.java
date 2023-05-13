@@ -10,4 +10,7 @@ public interface VideoRepository extends JpaRepository<VideoEntity, Long> {
     List<VideoEntity> findByNameContainsIgnoreCase(String name);
 
     List<VideoEntity> findByDescriptionContainsIgnoreCase(String description);
+
+    List<VideoEntity> findByNameContainsOrDescriptionContainsOrDurationContainsAllIgnoreCase(String name, String description, String duration);
+
 }
